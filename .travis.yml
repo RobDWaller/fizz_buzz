@@ -12,3 +12,4 @@ install:
 script:
     - python -m unittest discover tests/
     - python -m pylint fizz_buzz/
+    - python -m radon cc -as fizz_buzz/
