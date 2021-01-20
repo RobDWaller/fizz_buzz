@@ -29,5 +29,13 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
+    unittest discover tests/
+  displayName: 'test'
+
+- script: |
     pylint fizz_buzz/
-  displayName: 'pylint'
+  displayName: 'lint'
+
+- script: |
+    radon cc -as fizz_buzz/
+  displayName: 'complexity'
